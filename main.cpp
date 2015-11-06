@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    cout << "PicoBlaze MEM Converter v. 0.1 (C) 2015 by Piotr Żurek" << endl;
+    cout << "PicoBlaze MEM Converter v. 0.2 (C) 2015 by Piotr Żurek" << endl;
     if(argc != 3) {
         cout << "Usage: " << argv[0] << " input_mem_file output_mem_file" << endl;
     } else {
@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
                 outfiledata[i] = "@";
                 outfiledata[i] += buffer;
             } else {
-                sprintf(buffer, "%02X", ifd[i]);
+                sprintf(buffer, "%05X", ifd[i]);
                 outfiledata[i] = "";
                 outfiledata[i] += buffer;
             }
